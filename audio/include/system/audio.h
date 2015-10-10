@@ -262,6 +262,7 @@ typedef enum {
     AUDIO_FORMAT_E_AC3               = 0x0A000000UL,
     AUDIO_FORMAT_DTS                 = 0x0B000000UL,
     AUDIO_FORMAT_DTS_HD              = 0x0C000000UL,
+    AUDIO_FORMAT_IEC937              = 0x0D000000UL,
     AUDIO_FORMAT_MAIN_MASK           = 0xFF000000UL,
     AUDIO_FORMAT_SUB_MASK            = 0x00FFFFFFUL,
 
@@ -1363,6 +1364,7 @@ static inline bool audio_is_valid_format(audio_format_t format)
     case AUDIO_FORMAT_OPUS:
     case AUDIO_FORMAT_AC3:
     case AUDIO_FORMAT_E_AC3:
+    case AUDIO_FORMAT_IEC937:
     case AUDIO_FORMAT_DTS:
     case AUDIO_FORMAT_DTS_HD:
         return true;
